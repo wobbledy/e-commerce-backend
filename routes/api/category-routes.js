@@ -64,10 +64,10 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Deletes a category bt its `id` value
+// Deletes a category by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
-    const categoryData = await LibraryCard.destroy({
+    const categoryData = await Category.destroy({
       where: {
         id: req.params.id,
       },
